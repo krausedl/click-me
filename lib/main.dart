@@ -91,10 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Stack(
-        // have to change from 'Center' to 'Stack' because 'Center' acounts for one child,
-        // and 'Stack' allows to stack multiple
-        children: [
+      body: SafeArea(
+        //https://api.flutter.dev/flutter/widgets/SafeArea-class.html
+        // safearea helps with browser to ios layout stuffss
+          child: Stack(
+            // have to change from 'Center' to 'Stack' because 'Center' acounts for one child,
+          // and 'Stack' allows to stack multiple
+            children: [
           // have to have children here because there are multiple childs in this stack?
           Center(
             child: Column(
@@ -123,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ],
+          )
       ),
       // same code from previous button
       floatingActionButton: FloatingActionButton(
