@@ -1,4 +1,4 @@
-# flutter_application_4
+# click-me thing
 
 A new Flutter project.
 
